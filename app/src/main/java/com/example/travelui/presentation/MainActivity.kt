@@ -1,6 +1,5 @@
-package com.example.travelui
+package com.example.travelui.presentation
 
-import HomeScreen
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent

@@ -6,5 +6,6 @@
     <string name="activities">Activities</string>
     <string name="extreme_surf">Extreme Surf</string>
     <string name="kayaking">Kayaking</string>
-    <string name="what_would_you_like">What would you like</string>
+    <string name="what_would_you_like">What would you like?</string>
+    <string name="view_all">View all</string>
 </resources>
