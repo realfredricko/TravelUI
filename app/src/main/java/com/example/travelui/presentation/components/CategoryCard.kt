@@ -29,7 +29,7 @@ fun CategoryCard(imageRes: Int, title: String, location: String) {
     Column(
         modifier = Modifier
             .width(200.dp)
-            .height(200.dp)  // Adjust the height for better display
+            .height(200.dp)
     ) {
         Image(
             painter = painterResource(id = imageRes),
@@ -43,7 +43,9 @@ fun CategoryCard(imageRes: Int, title: String, location: String) {
         Spacer(modifier = Modifier.height(8.dp))
         Text(text = title, style = MaterialTheme.typography.titleMedium)
         Row {
-            Icon(imageVector = Icons.Outlined.LocationOn, contentDescription = "Location Icon")
+            Icon(imageVector = Icons.Outlined.LocationOn,
+                contentDescription = "Location Icon",
+                tint = Color.Gray)
             Spacer(modifier = Modifier.width(2.dp))
             Text(text = location, style = MaterialTheme.typography.bodySmall, color = Color.Gray)
         }
@@ -54,17 +56,19 @@ fun CategoryCard(imageRes: Int, title: String, location: String) {
 fun CategoryList() {
     Row(modifier = Modifier
         .fillMaxWidth()
-        .horizontalScroll(rememberScrollState())) {
+        /*horizontalScroll(rememberScrollState())
+    */) {
         CategoryCard(
             title = stringResource(id = R.string.extreme_surf),
             location = "Santa Cruz",
             imageRes = R.drawable.surfing
         )
+        Spacer(modifier = Modifier.width(16.dp))
         CategoryCard(
             title = stringResource(id = R.string.kayaking),
             location = "Santa Cruz",
-            imageRes = R.drawable.kayaking  // Corrected resource name
+            imageRes = R.drawable.kayaking
         )
-        Spacer(modifier = Modifier.width(16.dp))  // Adjusted to width for better scrolling spacing
+
     }
 }
